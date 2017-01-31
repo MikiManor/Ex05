@@ -5,6 +5,7 @@ namespace Ex05_Othelo
 {
     internal class GameBoard : Form
     {
+        List<Button> buttonOnBoardList = new List<Button>();
         public GameBoard()
         {
             this.InitializeComponent();
@@ -19,7 +20,7 @@ namespace Ex05_Othelo
             this.ShowIcon = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            List<Button> buttonOnBoardList = new List<Button>();
+            
             for (int i = 0; i < OtheloBoard.BoardSize; i++)
             {
                 for (int j = 0; j < OtheloBoard.BoardSize; j++)
@@ -39,6 +40,18 @@ namespace Ex05_Othelo
             this.StartPosition = FormStartPosition.CenterParent;
             this.BackColor = System.Drawing.Color.Green;
             this.Size = new System.Drawing.Size(k_Space * OtheloBoard.BoardSize + 40, k_Space * OtheloBoard.BoardSize + 60);
+        }
+
+        public void DrawBoard()
+        {
+            foreach (Button item in buttonOnBoardList)
+            {
+                if (true)
+                {
+
+                }
+            }
+            
         }
     }
 }

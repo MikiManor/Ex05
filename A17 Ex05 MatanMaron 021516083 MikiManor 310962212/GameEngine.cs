@@ -539,7 +539,8 @@ namespace Ex05_Othelo
          public static void MakeNewGame()
         {
             GameBoard newGame = new GameBoard();
-            
+            newGame.DrawBoard();
+            m_Board
         }
     }
 }

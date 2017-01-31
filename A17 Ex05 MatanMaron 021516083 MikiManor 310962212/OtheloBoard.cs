@@ -55,6 +55,8 @@ namespace Ex05_Othelo
             m_MatrixCells[(m_MatrixSize / 2) - 1, (m_MatrixSize / 2) ] = Piece.White;
             m_MatrixCells[(m_MatrixSize / 2), (m_MatrixSize / 2) - 1 ] = Piece.White;
             m_MatrixCells[(m_MatrixSize / 2), (m_MatrixSize / 2) ] = Piece.Black;
+
+            GameBoard.DrawBoard();
         }
 
         private Piece GetCellValue(int i_RowNumber, int i_ColumnNumber)
