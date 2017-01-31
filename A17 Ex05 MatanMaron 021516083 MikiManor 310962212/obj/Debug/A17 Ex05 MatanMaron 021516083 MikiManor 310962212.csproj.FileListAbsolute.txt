@@ -8,3 +8,11 @@ C:\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\A17 Ex05 MatanMaron 0215160
 C:\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\obj\Debug\Ex05_Othelo.MainMenu.resources
 C:\Ex05\WindowsFormsApplication1\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\obj\Debug\A17 Ex05 MatanMaron 021516083 MikiManor 310962212.exe
 C:\Ex05\WindowsFormsApplication1\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\obj\Debug\A17 Ex05 MatanMaron 021516083 MikiManor 310962212.pdb
+C:\Ex05\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\obj\Debug\A17 Ex05 MatanMaron 021516083 MikiManor 310962212.exe
+C:\Ex05\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\obj\Debug\A17 Ex05 MatanMaron 021516083 MikiManor 310962212.pdb
+C:\Ex05\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\bin\Debug\A17 Ex05 MatanMaron 021516083 MikiManor 310962212.exe
+C:\Ex05\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\bin\Debug\A17 Ex05 MatanMaron 021516083 MikiManor 310962212.pdb
+C:\Ex05\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\obj\Debug\A17 Ex05 MatanMaron 021516083 MikiManor 310962212.csprojResolveAssemblyReference.cache
+C:\Ex05\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\obj\Debug\Ex05_Othelo.MainMenu.resources
+C:\Ex05\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\obj\Debug\A17_Ex05_MatanMaron_021516083_MikiManor_310962212.Properties.Resources.resources
+C:\Ex05\A17 Ex05 MatanMaron 021516083 MikiManor 310962212\obj\Debug\A17 Ex05 MatanMaron 021516083 MikiManor 310962212.csproj.GenerateResource.Cache
