@@ -535,17 +535,5 @@ namespace Ex05_Othelo
 
             return score;
         }
-
-         public static void MakeNewGame()
-        {
-            bool IsPlayer1 = true;
-            GameBoard newGame = new GameBoard();
-            OtheloBoard gameBoard = new OtheloBoard(OtheloBoard.BoardSize);
-
-            newGame.DrawBoard(gameBoard.Matrix);
-            newGame.DrawMoves(gameBoard.Matrix,IsPlayer1);
-            
-
-        }
     }
 }

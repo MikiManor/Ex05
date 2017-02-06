@@ -5,25 +5,27 @@ namespace Ex05_Othelo
 {
     internal class GameBoard : Form
     {
-    
+        const int k_Size = 60;
+        const int k_Space = k_Size + 10;
+
         List<Button> buttonOnBoardList = new List<Button>();
         public GameBoard()
         {
             this.InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterParent;
-
-            this.Show();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void InitializeComponent()
         {
-            const int k_Size = 60;
-            const int k_Space = k_Size+10;
             this.MaximizeBox = false;
             this.ShowIcon = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.Color.Green;
+            this.Size = new System.Drawing.Size(k_Space * OtheloBoard.BoardSize + 40, k_Space * OtheloBoard.BoardSize + 60);
+        }
 
-
+        public void FirstDrawBoard(Piece[,] Matrix)
+        {
             for (int i = 0; i < OtheloBoard.BoardSize; i++)
             {
                 for (int j = 0; j < OtheloBoard.BoardSize; j++)
@@ -43,7 +45,6 @@ namespace Ex05_Othelo
             this.BackColor = System.Drawing.Color.Green;
             this.Size = new System.Drawing.Size(k_Space * OtheloBoard.BoardSize + 40, k_Space * OtheloBoard.BoardSize + 60);
         }
-
         public void DrawBoard(Piece[,] Matrix)
         {
             for (int rowsCounter = 0; rowsCounter < OtheloBoard.BoardSize; rowsCounter++)

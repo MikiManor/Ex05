@@ -24,10 +24,33 @@ namespace Ex05_Othelo
         private void buttonPlayVsPc_Click(object sender, EventArgs e)
         {
             Hide();
-            GameEngine.MakeNewGame();
-            Show();
+            Program.OtheloUI.StartPlay(OtheloBoard.BoardSize, 2);
         }
 
+        private void buttonPlayVsHuman_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Program.OtheloUI.StartPlay(OtheloBoard.BoardSize, 1);
+        }
 
+        public string GetPlayerName(string msg)
+        {
+            TextBox playerName = new TextBox();
+            TextBox playerNameHere = new TextBox();
+            playerName.TextAlign = HorizontalAlignment.Center;
+            playerNameHere.TextAlign = HorizontalAlignment.Center;
+            playerNameHere.Top = playerName.Top + 10;
+            playerName.Text = msg;
+            playerNameHere.Text = "Here";
+            playerName.Visible = true;
+            playerNameHere.Visible = true;
+
+            string name = playerNameHere.Text;
+            name = playerNameHere.Text;
+            playerName.Visible = false;
+            playerNameHere.Visible = false;
+            return name;
+
+        }
     }
 }

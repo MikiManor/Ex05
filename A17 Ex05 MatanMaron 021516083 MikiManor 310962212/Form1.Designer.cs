@@ -62,6 +62,7 @@
             this.buttonPlayVsHuman.TabIndex = 2;
             this.buttonPlayVsHuman.Text = "Play against a &Friend";
             this.buttonPlayVsHuman.UseVisualStyleBackColor = true;
+            this.buttonPlayVsHuman.Click += new System.EventHandler(this.buttonPlayVsHuman_Click);
             // 
             // MainMenu
             // 
@@ -78,6 +79,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Othello - Game Settings";
             this.ResumeLayout(false);
+
         }
 
         #endregion
