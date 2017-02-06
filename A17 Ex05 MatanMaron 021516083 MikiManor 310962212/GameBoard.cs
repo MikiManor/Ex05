@@ -9,7 +9,6 @@ namespace Ex05_Othelo
         public GameBoard()
         {
             this.InitializeComponent();
-            this.ShowDialog();
         }
 
         private void InitializeComponent()
@@ -42,16 +41,30 @@ namespace Ex05_Othelo
             this.Size = new System.Drawing.Size(k_Space * OtheloBoard.BoardSize + 40, k_Space * OtheloBoard.BoardSize + 60);
         }
 
-        public void DrawBoard()
+        public void DrawBoard(Piece[,] Matrix)
         {
-            foreach (Button item in buttonOnBoardList)
+            for (int rowsCounter = 0; rowsCounter < OtheloBoard.BoardSize; rowsCounter++)
             {
-                if (true)
+                for (int columnsCounter = 0; columnsCounter < OtheloBoard.BoardSize; columnsCounter++)
                 {
-
+                    Piece cellValue = Matrix[rowsCounter, columnsCounter];
+                    if (cellValue == Piece.Black)
+                    {
+                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].BackColor = System.Drawing.Color.Black;
+                    }
+                    else if (cellValue == Piece.White)
+                    {
+                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].BackColor = System.Drawing.Color.White;
+                    }
                 }
             }
-            
+            this.Show();
         }
+
+        public void DrawMoves(Piece[,] Matrix,bool IsPlayer1)
+        {
+            this.Show();
+        }
+
     }
 }

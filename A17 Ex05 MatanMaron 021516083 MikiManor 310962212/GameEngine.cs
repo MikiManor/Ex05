@@ -538,9 +538,14 @@ namespace Ex05_Othelo
 
          public static void MakeNewGame()
         {
+            bool IsPlayer1 = true;
             GameBoard newGame = new GameBoard();
-            newGame.DrawBoard();
-            m_Board
+            OtheloBoard gameBoard = new OtheloBoard(OtheloBoard.BoardSize);
+
+            newGame.DrawBoard(gameBoard.Matrix);
+            newGame.DrawMoves(gameBoard.Matrix,IsPlayer1);
+            
+
         }
     }
 }

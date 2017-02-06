@@ -23,7 +23,11 @@ namespace Ex05_Othelo
 
         private void buttonPlayVsPc_Click(object sender, EventArgs e)
         {
+            Hide();
             GameEngine.MakeNewGame();
+            Show();
         }
+
+
     }
 }
