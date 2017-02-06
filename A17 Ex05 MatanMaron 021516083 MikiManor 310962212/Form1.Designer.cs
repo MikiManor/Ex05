@@ -78,7 +78,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Othello - Game Settings";
             this.ResumeLayout(false);
-
         }
 
         #endregion

@@ -5,10 +5,14 @@ namespace Ex05_Othelo
 {
     internal class GameBoard : Form
     {
+    
         List<Button> buttonOnBoardList = new List<Button>();
         public GameBoard()
         {
             this.InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterParent;
+
+            this.Show();
         }
 
         private void InitializeComponent()
@@ -19,7 +23,7 @@ namespace Ex05_Othelo
             this.ShowIcon = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            
+
             for (int i = 0; i < OtheloBoard.BoardSize; i++)
             {
                 for (int j = 0; j < OtheloBoard.BoardSize; j++)
@@ -30,13 +34,12 @@ namespace Ex05_Othelo
                     {
                         buttonOnBoard.Location = new System.Drawing.Point(40, 40);
                     }
-                    buttonOnBoard.Location = new System.Drawing.Point(i*k_Size+40, j * k_Size+40);
+                    buttonOnBoard.Location = new System.Drawing.Point(i * k_Size + 40, j * k_Size + 40);
                     buttonOnBoard.BackColor = System.Drawing.Color.ForestGreen;
                     this.Controls.Add(buttonOnBoard);
                     buttonOnBoardList.Add(buttonOnBoard);
                 }
             }
-            this.StartPosition = FormStartPosition.CenterParent;
             this.BackColor = System.Drawing.Color.Green;
             this.Size = new System.Drawing.Size(k_Space * OtheloBoard.BoardSize + 40, k_Space * OtheloBoard.BoardSize + 60);
         }
@@ -58,12 +61,12 @@ namespace Ex05_Othelo
                     }
                 }
             }
-            this.Show();
+            this.Refresh();
         }
 
         public void DrawMoves(Piece[,] Matrix,bool IsPlayer1)
         {
-            this.Show();
+            this.Refresh();
         }
 
     }
