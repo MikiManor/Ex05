@@ -34,7 +34,7 @@ namespace Ex05_Othelo
 
         public int BoardSize
         {
-            get { return BoardSize; }
+            get { return OtheloBoard.BoardSize; }
         }
 
         public string ComputerName
@@ -166,13 +166,13 @@ namespace Ex05_Othelo
 
         public Point[] AvalibleMoves(Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
         {
-            Point[] Tempvalidpoint = new Point[BoardSize * BoardSize];
+            Point[] Tempvalidpoint = new Point[OtheloBoard.BoardSize * OtheloBoard.BoardSize];
             Point Testpoint = new Point();
             int k = 0;
             int counter = 0;
-            for (int i = 0; i < BoardSize; i++)
+            for (int i = 0; i < OtheloBoard.BoardSize; i++)
             {
-                for (int j = 0; j < BoardSize; j++)
+                for (int j = 0; j < OtheloBoard.BoardSize; j++)
                 {
                     Testpoint.X = j;
                     Testpoint.Y = i;

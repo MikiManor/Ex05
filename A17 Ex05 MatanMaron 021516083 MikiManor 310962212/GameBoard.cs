@@ -10,8 +10,9 @@ namespace Ex05_Othelo
         const int k_Space = k_Size + 10;
         TextBox playerName;
         TextBox playerNameHere;
-
+        Point playerPoint;
         List<Button> buttonOnBoardList = new List<Button>();
+
         public GameBoard()
         {
             this.InitializeComponent();
@@ -27,6 +28,14 @@ namespace Ex05_Othelo
             this.Size = new System.Drawing.Size(k_Space * OtheloBoard.BoardSize + 40, k_Space * OtheloBoard.BoardSize + 60);
         }
 
+        public string GetName()
+        {
+            string name = playerNameHere.Text;
+            this.Controls.Remove(playerName);
+            this.Controls.Remove(playerNameHere);
+            return name;
+        }
+
         public void FirstDrawBoard(Piece[,] Matrix)
         {
             for (int i = 0; i < OtheloBoard.BoardSize; i++)
@@ -34,28 +43,19 @@ namespace Ex05_Othelo
                 for (int j = 0; j < OtheloBoard.BoardSize; j++)
                 {
                     Button buttonOnBoard = new Button();
+                    buttonOnBoard.Click += OnClick;
                     buttonOnBoard.Size = new System.Drawing.Size(k_Size, k_Size);
                     if (i == 0 || j == 0)
                     {
                         buttonOnBoard.Location = new System.Drawing.Point(40, 40);
                     }
                     buttonOnBoard.Location = new System.Drawing.Point(i * k_Size + 40, j * k_Size + 40);
-                    buttonOnBoard.BackColor = System.Drawing.Color.ForestGreen;
                     this.Controls.Add(buttonOnBoard);
                     buttonOnBoardList.Add(buttonOnBoard);
                 }
             }
-            this.BackColor = System.Drawing.Color.Green;
+            
             this.Size = new System.Drawing.Size(k_Space * OtheloBoard.BoardSize + 40, k_Space * OtheloBoard.BoardSize + 60);
-        }
-
-        internal string ReadPlayerName()
-        {
-            string name = playerNameHere.Text;
-            name = playerNameHere.Text;
-            this.Controls.Remove(playerName);
-            this.Controls.Remove(playerNameHere);
-            return name;
         }
 
         public void DrawBoard(Piece[,] Matrix)
@@ -68,19 +68,30 @@ namespace Ex05_Othelo
                     if (cellValue == Piece.Black)
                     {
                         buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].BackColor = System.Drawing.Color.Black;
+                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].Enabled = false;
                     }
                     else if (cellValue == Piece.White)
                     {
                         buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].BackColor = System.Drawing.Color.White;
+                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].Enabled = false;
+                    }
+                    else
+                    {
+                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].BackColor = System.Drawing.Color.Gray;
+                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].Enabled = false;
                     }
                 }
             }
-            this.ShowDialog();
+            this.Refresh();
         }
 
-        public void DrawMoves(Piece[,] Matrix,bool IsPlayer1)
+        public void DrawMoves(Piece[,] Matrix, Point[] validpointlist)
         {
-            this.Refresh();
+            foreach (Point item in validpointlist)
+            {
+                buttonOnBoardList[item.Y * OtheloBoard.BoardSize + item.X].BackColor = System.Drawing.Color.Green;
+                buttonOnBoardList[item.Y * OtheloBoard.BoardSize + item.X].Enabled = true;
+            }
         }
 
         public void GetPlayerName(string msg)
@@ -108,8 +119,30 @@ namespace Ex05_Othelo
             if (e.KeyChar == (char)Keys.Return)
             {
                 e.Handled = true;
-                this.DialogResult = DialogResult.OK;
+                this.Hide();
             }
+        }
+
+        private void OnClick(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            int i = buttonOnBoardList.IndexOf(button);
+            int n = OtheloBoard.BoardSize;
+            playerPoint.X = i / n;
+            playerPoint.Y = i % n;
+            OtheloUI.gameMoves(playerPoint);
+            buttonOnBoardList[i].Enabled = false;
+            if (OtheloUI.isPlayerOne)
+            {
+                buttonOnBoardList[i].BackColor = System.Drawing.Color.Black;
+            }
+            else
+            {
+                buttonOnBoardList[i].BackColor = System.Drawing.Color.White;
+            }
+            OtheloUI.isPlayerOne = !OtheloUI.isPlayerOne;
+            this.Refresh();
+            OtheloUI.gameNextMoves();
         }
 
         protected override void OnClosed(EventArgs e)
