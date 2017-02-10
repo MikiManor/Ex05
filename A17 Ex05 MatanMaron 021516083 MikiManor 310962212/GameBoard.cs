@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Ex05_Othelo
@@ -7,6 +8,8 @@ namespace Ex05_Othelo
     {
         const int k_Size = 60;
         const int k_Space = k_Size + 10;
+        TextBox playerName;
+        TextBox playerNameHere;
 
         List<Button> buttonOnBoardList = new List<Button>();
         public GameBoard()
@@ -45,6 +48,16 @@ namespace Ex05_Othelo
             this.BackColor = System.Drawing.Color.Green;
             this.Size = new System.Drawing.Size(k_Space * OtheloBoard.BoardSize + 40, k_Space * OtheloBoard.BoardSize + 60);
         }
+
+        internal string ReadPlayerName()
+        {
+            string name = playerNameHere.Text;
+            name = playerNameHere.Text;
+            this.Controls.Remove(playerName);
+            this.Controls.Remove(playerNameHere);
+            return name;
+        }
+
         public void DrawBoard(Piece[,] Matrix)
         {
             for (int rowsCounter = 0; rowsCounter < OtheloBoard.BoardSize; rowsCounter++)
@@ -62,7 +75,7 @@ namespace Ex05_Othelo
                     }
                 }
             }
-            this.Refresh();
+            this.ShowDialog();
         }
 
         public void DrawMoves(Piece[,] Matrix,bool IsPlayer1)
@@ -70,5 +83,39 @@ namespace Ex05_Othelo
             this.Refresh();
         }
 
+        public void GetPlayerName(string msg)
+        {
+            playerName = new TextBox();
+            playerNameHere = new TextBox();
+            playerNameHere.KeyPress += PlayerNameHere_KeyPress;
+            playerName.Width = 200;
+            playerNameHere.Width = 200;
+            playerName.Left = 100;
+            playerName.Top = 100;
+            playerNameHere.Left = 100;
+            playerNameHere.Top = 130;
+            playerName.ReadOnly = true;
+            playerName.Text = msg;
+            playerNameHere.Text = "Here, and press \"Enter\"";
+            this.Controls.Add(playerName);
+            this.Controls.Add(playerNameHere);
+            this.ActiveControl = playerNameHere;
+            this.ShowDialog();
+        }
+
+        private void PlayerNameHere_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                e.Handled = true;
+                this.DialogResult = DialogResult.OK;
+            }
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Exit();
+        }
     }
 }
