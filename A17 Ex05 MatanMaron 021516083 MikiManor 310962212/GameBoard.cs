@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Ex05_Othelo
 {
@@ -11,11 +12,25 @@ namespace Ex05_Othelo
         TextBox playerName;
         TextBox playerNameHere;
         Point playerPoint;
+        PictureBox pcMove;
         List<Button> buttonOnBoardList = new List<Button>();
+        Image BlackPiece = A17_Ex05_MatanMaron_021516083_MikiManor_310962212.Properties.Resources.black;
+        Image WhitePiece = A17_Ex05_MatanMaron_021516083_MikiManor_310962212.Properties.Resources.white;
+        Image PcMoveImage = A17_Ex05_MatanMaron_021516083_MikiManor_310962212.Properties.Resources.pc;
 
         public GameBoard()
         {
             this.InitializeComponent();
+            pcMove = new PictureBox();
+            pcMove.Height = 150;
+            pcMove.Width = 150;
+            pcMove.Image = PcMoveImage;
+            pcMove.BackColor = Color.White;
+            this.pcMove.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcMove.Hide();
+            this.Controls.Add(pcMove);
+            pcMove.Left = (this.ClientSize.Width - pcMove.Width) / 2;
+            pcMove.Top = (20);
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -67,18 +82,22 @@ namespace Ex05_Othelo
                     Piece cellValue = Matrix[rowsCounter, columnsCounter];
                     if (cellValue == Piece.Black)
                     {
-                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].BackColor = System.Drawing.Color.Black;
-                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].Enabled = false;
+                        buttonOnBoardList[columnsCounter * OtheloBoard.BoardSize + rowsCounter].BackgroundImage = BlackPiece;
+                        buttonOnBoardList[columnsCounter * OtheloBoard.BoardSize + rowsCounter].BackgroundImageLayout = ImageLayout.Stretch;
+                        buttonOnBoardList[columnsCounter * OtheloBoard.BoardSize + rowsCounter].BackColor = Color.Green;
+                        buttonOnBoardList[columnsCounter * OtheloBoard.BoardSize + rowsCounter].Enabled = false;
                     }
                     else if (cellValue == Piece.White)
                     {
-                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].BackColor = System.Drawing.Color.White;
-                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].Enabled = false;
+                        buttonOnBoardList[columnsCounter * OtheloBoard.BoardSize + rowsCounter].BackgroundImage = WhitePiece;
+                        buttonOnBoardList[columnsCounter * OtheloBoard.BoardSize + rowsCounter].BackgroundImageLayout = ImageLayout.Stretch;
+                        buttonOnBoardList[columnsCounter * OtheloBoard.BoardSize + rowsCounter].BackColor = Color.Green;
+                        buttonOnBoardList[columnsCounter * OtheloBoard.BoardSize + rowsCounter].Enabled = false;
                     }
                     else
                     {
-                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].BackColor = System.Drawing.Color.Gray;
-                        buttonOnBoardList[rowsCounter * OtheloBoard.BoardSize + columnsCounter].Enabled = false;
+                        buttonOnBoardList[columnsCounter * OtheloBoard.BoardSize + rowsCounter].BackColor = System.Drawing.Color.Green;
+                        buttonOnBoardList[columnsCounter * OtheloBoard.BoardSize + rowsCounter].Enabled = false;
                     }
                 }
             }
@@ -89,8 +108,8 @@ namespace Ex05_Othelo
         {
             foreach (Point item in validpointlist)
             {
-                buttonOnBoardList[item.Y * OtheloBoard.BoardSize + item.X].BackColor = System.Drawing.Color.Green;
-                buttonOnBoardList[item.Y * OtheloBoard.BoardSize + item.X].Enabled = true;
+                buttonOnBoardList[item.X * OtheloBoard.BoardSize + item.Y].BackColor = System.Drawing.Color.GreenYellow;
+                buttonOnBoardList[item.X * OtheloBoard.BoardSize + item.Y].Enabled = true;
             }
         }
 
@@ -125,6 +144,15 @@ namespace Ex05_Othelo
 
         private void OnClick(object sender, EventArgs e)
         {
+            MoveOnClick(sender, e);
+            if (OtheloUI.menuSelection == 2)
+            {
+                MoveOnClick(sender, e);
+            }
+        }
+
+        private void MoveOnClick(object sender, EventArgs e)
+        {
             Button button = sender as Button;
             int i = buttonOnBoardList.IndexOf(button);
             int n = OtheloBoard.BoardSize;
@@ -132,13 +160,35 @@ namespace Ex05_Othelo
             playerPoint.Y = i % n;
             OtheloUI.gameMoves(playerPoint);
             buttonOnBoardList[i].Enabled = false;
+
             if (OtheloUI.isPlayerOne)
             {
-                buttonOnBoardList[i].BackColor = System.Drawing.Color.Black;
+                buttonOnBoardList[i].BackgroundImage = BlackPiece;
+                buttonOnBoardList[i].BackgroundImageLayout = ImageLayout.Stretch;
             }
             else
             {
-                buttonOnBoardList[i].BackColor = System.Drawing.Color.White;
+                if (OtheloUI.menuSelection == 1)
+                {
+                    buttonOnBoardList[i].BackgroundImage = WhitePiece;
+                    buttonOnBoardList[i].BackgroundImageLayout = ImageLayout.Stretch;
+                }
+
+                else if (OtheloUI.menuSelection == 2)
+                {
+                    if (OtheloUI.isPlayerOne)
+                    {
+                        buttonOnBoardList[i].BackgroundImage = BlackPiece;
+                        buttonOnBoardList[i].BackgroundImageLayout = ImageLayout.Stretch;
+                    }
+                    else
+                    {
+                        pcMove.Show();
+                        this.Refresh();
+                        System.Threading.Thread.Sleep(2000);
+                        pcMove.Hide();
+                    }
+                }
             }
             OtheloUI.isPlayerOne = !OtheloUI.isPlayerOne;
             this.Refresh();

@@ -28,7 +28,7 @@ namespace Ex05_Othelo
         private static GameBoard m_GameBoard;
         private static bool gameOver = false;
         internal static bool isPlayerOne = true;
-        private static int menuSelection;
+        internal static int menuSelection;
 
         public OtheloUI()
         {
@@ -113,7 +113,7 @@ namespace Ex05_Othelo
                 if (menuSelection == 1)
                 {
                     if (m_GameEngine.AvalibleMoves(m_GameEngine.Board, Piece.White, Piece.Black).Length != 0)
-                        m_GameEngine.HumanMove(playerPoint, !isPlayerOne);
+                        m_GameEngine.HumanMove(playerPoint, isPlayerOne);
                     else
                         MessageBox.Show("No moves!");
                 }
