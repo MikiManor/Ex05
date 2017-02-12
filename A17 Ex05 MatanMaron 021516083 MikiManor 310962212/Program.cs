@@ -24,9 +24,9 @@ namespace Ex05_Othelo
     public class OtheloUI
     {
         private static MainMenu m_MyMenu;
-        private static GameEngine m_GameEngine;
+        internal static GameEngine m_GameEngine;
         private static GameBoard m_GameBoard;
-        private static bool gameOver = false;
+        internal static bool gameOver = false;
         internal static bool isPlayerOne = true;
         internal static int menuSelection;
 
@@ -103,19 +103,13 @@ namespace Ex05_Othelo
         { 
             if (isPlayerOne)
             {
-                if (m_GameEngine.AvalibleMoves(m_GameEngine.Board, Piece.Black, Piece.White).Length != 0)
-                    m_GameEngine.HumanMove(playerPoint, isPlayerOne);
-                else
-                    MessageBox.Show("No moves!");
+                   m_GameEngine.HumanMove(playerPoint, isPlayerOne);
             }
             else
             {
                 if (menuSelection == 1)
                 {
-                    if (m_GameEngine.AvalibleMoves(m_GameEngine.Board, Piece.White, Piece.Black).Length != 0)
-                        m_GameEngine.HumanMove(playerPoint, isPlayerOne);
-                    else
-                        MessageBox.Show("No moves!");
+                    m_GameEngine.HumanMove(playerPoint, isPlayerOne);
                 }
                 else if (menuSelection == 2)
                 {
@@ -128,6 +122,28 @@ namespace Ex05_Othelo
         {
             int numOfValidMovesForPlayer1 = m_GameEngine.AvalibleMoves(m_GameEngine.Board, Piece.Black, Piece.White).Length;
             int numOfValidMovesForPlayer2 = m_GameEngine.AvalibleMoves(m_GameEngine.Board, Piece.White, Piece.Black).Length;
+            m_GameBoard.DrawBoard(m_GameEngine.Board);
+            if (numOfValidMovesForPlayer1 == 0 && numOfValidMovesForPlayer2 == 0)
+            {
+                gameOver = true;
+            }
+            else if (isPlayerOne)
+            {
+                if (numOfValidMovesForPlayer1 == 0 && numOfValidMovesForPlayer2 != 0)
+                {
+                    MessageBox.Show("Black, No Moves! Next Turn....");
+                    isPlayerOne = !isPlayerOne;
+                }
+            }
+            else if (!isPlayerOne)
+            {
+                if (numOfValidMovesForPlayer1 != 0 && numOfValidMovesForPlayer2 == 0)
+                {
+                    MessageBox.Show("White, No Moves! Next Turn....");
+                    isPlayerOne = !isPlayerOne;
+                }
+            }
+
             Point scoreOfPlayers = m_GameEngine.ScoreCount(m_GameEngine.Board);
             int scoreOfPlayer1 = scoreOfPlayers.X;
             int scoreOfPlayer2 = scoreOfPlayers.Y;
@@ -144,12 +160,24 @@ namespace Ex05_Othelo
             {
                 winnerPlayer = "No winner here, this is even...";
             }
-            
-            if (numOfValidMovesForPlayer1 == 0 && numOfValidMovesForPlayer2 == 0)
+
+            if (gameOver)
             {
-                gameOver = true;
+                string msg = string.Format("GameOver! Black: {0}, White: {1}, And the winner is : {2}", m_GameEngine.ScoreCount(m_GameEngine.Board).X, m_GameEngine.ScoreCount(m_GameEngine.Board).Y, winnerPlayer);
+                DialogResult  result = MessageBox.Show(msg, "capt", MessageBoxButtons.YesNo);
+
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    m_GameBoard.Dispose();
+                    gameOver = false;
+                    isPlayerOne = true;
+                    StartPlay(OtheloBoard.BoardSize, menuSelection);
+                }
+                else
+                {
+                    Application.Exit();
+                }
             }
-            m_GameBoard.DrawBoard(m_GameEngine.Board);
             ShowMoves();
         }
     }

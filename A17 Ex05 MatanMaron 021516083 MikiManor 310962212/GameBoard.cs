@@ -22,15 +22,15 @@ namespace Ex05_Othelo
         {
             this.InitializeComponent();
             pcMove = new PictureBox();
-            pcMove.Height = 150;
-            pcMove.Width = 150;
+            pcMove.Height = 100;
+            pcMove.Width = 100;
             pcMove.Image = PcMoveImage;
             pcMove.BackColor = Color.White;
             this.pcMove.SizeMode = PictureBoxSizeMode.StretchImage;
             pcMove.Hide();
             this.Controls.Add(pcMove);
             pcMove.Left = (this.ClientSize.Width - pcMove.Width) / 2;
-            pcMove.Top = (20);
+            pcMove.Top = (5);
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -69,7 +69,7 @@ namespace Ex05_Othelo
                     buttonOnBoardList.Add(buttonOnBoard);
                 }
             }
-            
+            this.Text = "Othello - Black's Turn (" + OtheloUI.m_GameEngine.Player1.PlayerName + ")";
             this.Size = new System.Drawing.Size(k_Space * OtheloBoard.BoardSize + 40, k_Space * OtheloBoard.BoardSize + 60);
         }
 
@@ -145,10 +145,13 @@ namespace Ex05_Othelo
         private void OnClick(object sender, EventArgs e)
         {
             MoveOnClick(sender, e);
+            DrawBoard(OtheloUI.m_GameEngine.Board);
             if (OtheloUI.menuSelection == 2)
             {
                 MoveOnClick(sender, e);
             }
+            OtheloUI.gameNextMoves();
+            this.Refresh();
         }
 
         private void MoveOnClick(object sender, EventArgs e)
@@ -165,6 +168,7 @@ namespace Ex05_Othelo
             {
                 buttonOnBoardList[i].BackgroundImage = BlackPiece;
                 buttonOnBoardList[i].BackgroundImageLayout = ImageLayout.Stretch;
+                this.Text = "Othello - Whites's Turn (" + OtheloUI.m_GameEngine.Player2.PlayerName + ")";
             }
             else
             {
@@ -175,24 +179,16 @@ namespace Ex05_Othelo
                 }
 
                 else if (OtheloUI.menuSelection == 2)
-                {
-                    if (OtheloUI.isPlayerOne)
-                    {
-                        buttonOnBoardList[i].BackgroundImage = BlackPiece;
-                        buttonOnBoardList[i].BackgroundImageLayout = ImageLayout.Stretch;
-                    }
-                    else
-                    {
-                        pcMove.Show();
-                        this.Refresh();
-                        System.Threading.Thread.Sleep(2000);
-                        pcMove.Hide();
-                    }
+                { 
+                    pcMove.Show();
+                    this.Refresh();
+                    System.Threading.Thread.Sleep(1000);
+                    pcMove.Hide();
                 }
+                this.Text = "Othello - Black's Turn (" + OtheloUI.m_GameEngine.Player1.PlayerName + ")";
             }
             OtheloUI.isPlayerOne = !OtheloUI.isPlayerOne;
             this.Refresh();
-            OtheloUI.gameNextMoves();
         }
 
         protected override void OnClosed(EventArgs e)

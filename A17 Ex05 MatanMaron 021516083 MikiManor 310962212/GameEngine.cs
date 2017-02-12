@@ -532,7 +532,6 @@ namespace Ex05_Othelo
                     }
                 }
             }
-
             return score;
         }
     }
