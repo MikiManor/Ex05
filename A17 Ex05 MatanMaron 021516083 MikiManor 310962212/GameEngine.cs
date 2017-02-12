@@ -19,17 +19,17 @@ namespace Ex05_Othelo
 
         public Player Player1
         {
-            get { return m_Player1; }
+            get { return this.m_Player1; }
         }
 
         public Player Player2
         {
-            get { return m_Player2; }
+            get { return this.m_Player2; }
         }
 
-        public Piece [,] Board
+        public Piece [ , ] Board
         {
-            get { return m_Board.Matrix; }
+            get { return this.m_Board.Matrix; }
         }
 
         public int BoardSize
@@ -39,27 +39,27 @@ namespace Ex05_Othelo
 
         public string ComputerName
         {
-            get { return m_ComputerName; }
+            get { return this.m_ComputerName; }
         }
 
         public void CreateBoard(int i_MatrixSize)
         {
-            m_Board = new OtheloBoard(i_MatrixSize);
+            this.m_Board = new OtheloBoard(i_MatrixSize);
         }
 
         public void CreateFirstPlayer(string i_PlayerName)
         {
-            m_Player1 = new Player(Piece.Black, i_PlayerName);
+            this.m_Player1 = new Player(Piece.Black, i_PlayerName);
         }
         
         public void CreateSecondPlayer(string i_PlayerName)
         {
-            m_Player2 = new Player(Piece.White, i_PlayerName);
+            this.m_Player2 = new Player(Piece.White, i_PlayerName);
         }
 
         public void CreateComputerPlayer()
         {
-            m_Player2 = new Player(Piece.White, m_ComputerName);
+            this.m_Player2 = new Player(Piece.White, this.m_ComputerName);
         }
                 
         public bool IsUserInputPointInBoundaries(Point i_UserInputPoint)

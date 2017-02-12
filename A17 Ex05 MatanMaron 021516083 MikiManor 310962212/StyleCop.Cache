@@ -1,8 +1,5 @@
 <stylecopresultscache>
   <version>12</version>
-  <project key="-1736324552">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
   <sourcecode name="GameBoard.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016/11/09 21:13:02.000</styleCop>
@@ -83,6 +80,1309 @@
       <violation namespace="StyleCop.CSharp.NamingRules" rule="ElementMustBeginWithUpperCaseLetter" ruleCheckId="SA1300">
         <context>method names begin with an upper-case letter: moveOnClick.</context>
         <line>167</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <project key="-1736324552">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
+  <sourcecode name="GameEngine.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2016/11/09 21:13:02.000</styleCop>
+      <settingsFile>2017/02/12 19:03:04.898</settingsFile>
+      <sourceFile>2017/02/12 19:14:27.879</sourceFile>
+      <parser>2016/11/09 21:13:02.000</parser>
+      <StyleCop.CSharp.DocumentationRules>2016/11/09 21:13:02.000</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>-277821146</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2016/11/09 21:13:02.000</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2016/11/09 21:13:02.000</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2016/11/09 21:13:02.000</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2016/11/09 21:13:02.000</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2016/11/09 21:13:02.000</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2016/11/09 21:13:02.000</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
+        <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>347</line>
+        <index>11759</index>
+        <endIndex>11760</endIndex>
+        <startLine>347</startLine>
+        <startColumn>1</startColumn>
+        <endLine>347</endLine>
+        <endColumn>2</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>371</line>
+        <index>12565</index>
+        <endIndex>12566</endIndex>
+        <startLine>371</startLine>
+        <startColumn>1</startColumn>
+        <endLine>371</endLine>
+        <endColumn>2</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>395</line>
+        <index>13329</index>
+        <endIndex>13330</endIndex>
+        <startLine>395</startLine>
+        <startColumn>1</startColumn>
+        <endLine>395</endLine>
+        <endColumn>2</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>419</line>
+        <index>14156</index>
+        <endIndex>14157</endIndex>
+        <startLine>419</startLine>
+        <startColumn>1</startColumn>
+        <endLine>419</endLine>
+        <endColumn>2</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>443</line>
+        <index>14920</index>
+        <endIndex>14921</endIndex>
+        <startLine>443</startLine>
+        <startColumn>1</startColumn>
+        <endLine>443</endLine>
+        <endColumn>2</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>467</line>
+        <index>15727</index>
+        <endIndex>15728</endIndex>
+        <startLine>467</startLine>
+        <startColumn>1</startColumn>
+        <endLine>467</endLine>
+        <endColumn>2</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>491</line>
+        <index>16471</index>
+        <endIndex>16472</endIndex>
+        <startLine>491</startLine>
+        <startColumn>1</startColumn>
+        <endLine>491</endLine>
+        <endColumn>2</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>515</line>
+        <index>17257</index>
+        <endIndex>17258</endIndex>
+        <startLine>515</startLine>
+        <startColumn>1</startColumn>
+        <endLine>515</endLine>
+        <endColumn>2</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="VariableNamesMustNotBePrefixed" ruleCheckId="SA1308">
+        <context>Variable names must not start with 'm_' or 's_'.</context>
+        <line>16</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: m_Player1.</context>
+        <line>16</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="VariableNamesMustNotBePrefixed" ruleCheckId="SA1308">
+        <context>Variable names must not start with 'm_' or 's_'.</context>
+        <line>17</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: m_ComputerName.</context>
+        <line>17</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="VariableNamesMustNotBePrefixed" ruleCheckId="SA1308">
+        <context>Variable names must not start with 'm_' or 's_'.</context>
+        <line>18</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: m_Board.</context>
+        <line>18</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="OpeningSquareBracketsMustBeSpacedCorrectly" ruleCheckId="SA1010">
+        <context>Invalid spacing around the opening square bracket.</context>
+        <line>30</line>
+        <index>620</index>
+        <endIndex>620</endIndex>
+        <startLine>30</startLine>
+        <startColumn>22</startColumn>
+        <endLine>30</endLine>
+        <endColumn>22</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="CommasMustBeSpacedCorrectly" ruleCheckId="SA1001">
+        <context>Invalid spacing around the comma.</context>
+        <line>30</line>
+        <index>622</index>
+        <endIndex>622</endIndex>
+        <startLine>30</startLine>
+        <startColumn>24</startColumn>
+        <endLine>30</endLine>
+        <endColumn>24</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingSquareBracketsMustBeSpacedCorrectly" ruleCheckId="SA1011">
+        <context>Invalid spacing around the closing square bracket.</context>
+        <line>30</line>
+        <index>624</index>
+        <endIndex>624</endIndex>
+        <startLine>30</startLine>
+        <startColumn>26</startColumn>
+        <endLine>30</endLine>
+        <endColumn>26</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_MatrixSize' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>45</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_PlayerName' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>50</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_PlayerName' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>55</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_UserInputPoint' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>65</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>67</line>
+        <index>1652</index>
+        <endIndex>1660</endIndex>
+        <startLine>67</startLine>
+        <startColumn>39</startColumn>
+        <endLine>67</endLine>
+        <endColumn>47</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>67</line>
+        <index>1713</index>
+        <endIndex>1721</endIndex>
+        <startLine>67</startLine>
+        <startColumn>100</startColumn>
+        <endLine>67</endLine>
+        <endColumn>108</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_PlayerPoint' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>77</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_IsFirstPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>77</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to MakeMove must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>94</line>
+        <index>2577</index>
+        <endIndex>2584</endIndex>
+        <startLine>94</startLine>
+        <startColumn>17</startColumn>
+        <endLine>94</endLine>
+        <endColumn>24</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to m_Board must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>94</line>
+        <index>2601</index>
+        <endIndex>2607</endIndex>
+        <startLine>94</startLine>
+        <startColumn>41</startColumn>
+        <endLine>94</endLine>
+        <endColumn>47</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateMove must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>92</line>
+        <index>2452</index>
+        <endIndex>2463</endIndex>
+        <startLine>92</startLine>
+        <startColumn>17</startColumn>
+        <endLine>92</endLine>
+        <endColumn>28</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to m_Board must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>92</line>
+        <index>2480</index>
+        <endIndex>2486</endIndex>
+        <startLine>92</startLine>
+        <startColumn>45</startColumn>
+        <endLine>92</endLine>
+        <endColumn>51</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>103</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>106</line>
+        <index>2954</index>
+        <endIndex>2962</endIndex>
+        <startLine>106</startLine>
+        <startColumn>27</startColumn>
+        <endLine>106</endLine>
+        <endColumn>35</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>106</line>
+        <index>2966</index>
+        <endIndex>2974</endIndex>
+        <startLine>106</startLine>
+        <startColumn>39</startColumn>
+        <endLine>106</endLine>
+        <endColumn>47</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>111</line>
+        <index>3180</index>
+        <endIndex>3188</endIndex>
+        <startLine>111</startLine>
+        <startColumn>48</startColumn>
+        <endLine>111</endLine>
+        <endColumn>56</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>111</line>
+        <index>3192</index>
+        <endIndex>3200</endIndex>
+        <startLine>111</startLine>
+        <startColumn>60</startColumn>
+        <endLine>111</endLine>
+        <endColumn>68</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>114</line>
+        <index>3317</index>
+        <endIndex>3325</endIndex>
+        <startLine>114</startLine>
+        <startColumn>41</startColumn>
+        <endLine>114</endLine>
+        <endColumn>49</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>112</line>
+        <index>3241</index>
+        <endIndex>3249</endIndex>
+        <startLine>112</startLine>
+        <startColumn>37</startColumn>
+        <endLine>112</endLine>
+        <endColumn>45</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to MakeMove must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>120</line>
+        <index>3473</index>
+        <endIndex>3480</endIndex>
+        <startLine>120</startLine>
+        <startColumn>17</startColumn>
+        <endLine>120</endLine>
+        <endColumn>24</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ScoreCount must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>124</line>
+        <index>3700</index>
+        <endIndex>3709</endIndex>
+        <startLine>124</startLine>
+        <startColumn>35</startColumn>
+        <endLine>124</endLine>
+        <endColumn>44</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ScoreCount must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>125</line>
+        <index>3760</index>
+        <endIndex>3769</endIndex>
+        <startLine>125</startLine>
+        <startColumn>35</startColumn>
+        <endLine>125</endLine>
+        <endColumn>44</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ScoreCount must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>122</line>
+        <index>3563</index>
+        <endIndex>3572</endIndex>
+        <startLine>122</startLine>
+        <startColumn>22</startColumn>
+        <endLine>122</endLine>
+        <endColumn>31</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ScoreCount must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>122</line>
+        <index>3606</index>
+        <endIndex>3615</endIndex>
+        <startLine>122</startLine>
+        <startColumn>65</startColumn>
+        <endLine>122</endLine>
+        <endColumn>74</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="CommasMustBeSpacedCorrectly" ruleCheckId="SA1001">
+        <context>Invalid spacing around the comma.</context>
+        <line>111</line>
+        <index>3190</index>
+        <endIndex>3190</endIndex>
+        <startLine>111</startLine>
+        <startColumn>58</startColumn>
+        <endLine>111</endLine>
+        <endColumn>58</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="CommasMustBeSpacedCorrectly" ruleCheckId="SA1001">
+        <context>Invalid spacing around the comma.</context>
+        <line>116</line>
+        <index>3392</index>
+        <endIndex>3392</endIndex>
+        <startLine>116</startLine>
+        <startColumn>36</startColumn>
+        <endLine>116</endLine>
+        <endColumn>36</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="CommasMustBeSpacedCorrectly" ruleCheckId="SA1001">
+        <context>Invalid spacing around the comma.</context>
+        <line>116</line>
+        <index>3407</index>
+        <endIndex>3407</endIndex>
+        <startLine>116</startLine>
+        <startColumn>51</startColumn>
+        <endLine>116</endLine>
+        <endColumn>51</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Move.</context>
+        <line>134</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>134</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>134</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>134</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateUp must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>140</line>
+        <index>4233</index>
+        <endIndex>4242</endIndex>
+        <startLine>140</startLine>
+        <startColumn>22</startColumn>
+        <endLine>140</endLine>
+        <endColumn>31</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateUpRight must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>140</line>
+        <index>4294</index>
+        <endIndex>4308</endIndex>
+        <startLine>140</startLine>
+        <startColumn>83</startColumn>
+        <endLine>140</endLine>
+        <endColumn>97</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateRight must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>140</line>
+        <index>4360</index>
+        <endIndex>4372</endIndex>
+        <startLine>140</startLine>
+        <startColumn>149</startColumn>
+        <endLine>140</endLine>
+        <endColumn>161</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateDownRight must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>140</line>
+        <index>4424</index>
+        <endIndex>4440</endIndex>
+        <startLine>140</startLine>
+        <startColumn>213</startColumn>
+        <endLine>140</endLine>
+        <endColumn>229</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateDown must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>140</line>
+        <index>4492</index>
+        <endIndex>4503</endIndex>
+        <startLine>140</startLine>
+        <startColumn>281</startColumn>
+        <endLine>140</endLine>
+        <endColumn>292</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateDownLeft must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>140</line>
+        <index>4555</index>
+        <endIndex>4570</endIndex>
+        <startLine>140</startLine>
+        <startColumn>344</startColumn>
+        <endLine>140</endLine>
+        <endColumn>359</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateLeft must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>140</line>
+        <index>4622</index>
+        <endIndex>4633</endIndex>
+        <startLine>140</startLine>
+        <startColumn>411</startColumn>
+        <endLine>140</endLine>
+        <endColumn>422</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateUpLeft must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>140</line>
+        <index>4685</index>
+        <endIndex>4698</endIndex>
+        <startLine>140</startLine>
+        <startColumn>474</startColumn>
+        <endLine>140</endLine>
+        <endColumn>487</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>150</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>150</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>150</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to AvalibleMoves must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>153</line>
+        <index>5072</index>
+        <endIndex>5084</endIndex>
+        <startLine>153</startLine>
+        <startColumn>30</startColumn>
+        <endLine>153</endLine>
+        <endColumn>42</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to PcAI must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>161</line>
+        <index>5359</index>
+        <endIndex>5362</endIndex>
+        <startLine>161</startLine>
+        <startColumn>22</startColumn>
+        <endLine>161</endLine>
+        <endColumn>25</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to MakeMove must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>162</line>
+        <index>5403</index>
+        <endIndex>5410</endIndex>
+        <startLine>162</startLine>
+        <startColumn>13</startColumn>
+        <endLine>162</endLine>
+        <endColumn>20</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SemicolonsMustBeSpacedCorrectly" ruleCheckId="SA1002">
+        <context>Invalid spacing around the semicolon.</context>
+        <line>162</line>
+        <index>5460</index>
+        <endIndex>5460</endIndex>
+        <startLine>162</startLine>
+        <startColumn>70</startColumn>
+        <endLine>162</endLine>
+        <endColumn>70</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>162</line>
+        <index>5461</index>
+        <endIndex>5476</endIndex>
+        <startLine>162</startLine>
+        <startColumn>71</startColumn>
+        <endLine>162</endLine>
+        <endColumn>86</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
+        <context>The spacing around the symbol '+' is invalid.</context>
+        <line>163</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1009">
+        <context>Invalid spacing around the closing parenthesis.</context>
+        <line>163</line>
+        <index>5571</index>
+        <endIndex>5571</endIndex>
+        <startLine>163</startLine>
+        <startColumn>93</startColumn>
+        <endLine>163</endLine>
+        <endColumn>93</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
+        <context>The spacing around the symbol '+' is invalid.</context>
+        <line>163</line>
+        <index>5571</index>
+        <endIndex>5571</endIndex>
+        <startLine>163</startLine>
+        <startColumn>93</startColumn>
+        <endLine>163</endLine>
+        <endColumn>93</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Tempvalidpoint.</context>
+        <line>169</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Testpoint.</context>
+        <line>170</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: NewValidPoint.</context>
+        <line>189</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>167</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>167</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>167</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateMove must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>179</line>
+        <index>6197</index>
+        <endIndex>6208</endIndex>
+        <startLine>179</startLine>
+        <startColumn>25</startColumn>
+        <endLine>179</endLine>
+        <endColumn>36</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Move.</context>
+        <line>199</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>199</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>199</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>199</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateUp must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>203</line>
+        <index>7022</index>
+        <endIndex>7031</endIndex>
+        <startLine>203</startLine>
+        <startColumn>17</startColumn>
+        <endLine>203</endLine>
+        <endColumn>26</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>220</line>
+        <index>7649</index>
+        <endIndex>7657</endIndex>
+        <startLine>220</startLine>
+        <startColumn>72</startColumn>
+        <endLine>220</endLine>
+        <endColumn>80</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateUpRight must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>218</line>
+        <index>7498</index>
+        <endIndex>7512</endIndex>
+        <startLine>218</startLine>
+        <startColumn>17</startColumn>
+        <endLine>218</endLine>
+        <endColumn>31</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>235</line>
+        <index>8130</index>
+        <endIndex>8138</endIndex>
+        <startLine>235</startLine>
+        <startColumn>46</startColumn>
+        <endLine>235</endLine>
+        <endColumn>54</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateRight must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>233</line>
+        <index>8007</index>
+        <endIndex>8019</endIndex>
+        <startLine>233</startLine>
+        <startColumn>17</startColumn>
+        <endLine>233</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>250</line>
+        <index>8648</index>
+        <endIndex>8656</endIndex>
+        <startLine>250</startLine>
+        <startColumn>66</startColumn>
+        <endLine>250</endLine>
+        <endColumn>74</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>250</line>
+        <index>8665</index>
+        <endIndex>8673</endIndex>
+        <startLine>250</startLine>
+        <startColumn>83</startColumn>
+        <endLine>250</endLine>
+        <endColumn>91</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateDownRight must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>248</line>
+        <index>8497</index>
+        <endIndex>8513</endIndex>
+        <startLine>248</startLine>
+        <startColumn>21</startColumn>
+        <endLine>248</endLine>
+        <endColumn>37</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>265</line>
+        <index>9175</index>
+        <endIndex>9183</endIndex>
+        <startLine>265</startLine>
+        <startColumn>46</startColumn>
+        <endLine>265</endLine>
+        <endColumn>54</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateDown must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>263</line>
+        <index>9053</index>
+        <endIndex>9064</endIndex>
+        <startLine>263</startLine>
+        <startColumn>17</startColumn>
+        <endLine>263</endLine>
+        <endColumn>28</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>280</line>
+        <index>9680</index>
+        <endIndex>9688</endIndex>
+        <startLine>280</startLine>
+        <startColumn>62</startColumn>
+        <endLine>280</endLine>
+        <endColumn>70</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateDownLeft must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>278</line>
+        <index>9538</index>
+        <endIndex>9553</endIndex>
+        <startLine>278</startLine>
+        <startColumn>17</startColumn>
+        <endLine>278</endLine>
+        <endColumn>32</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateLeft must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>293</line>
+        <index>10048</index>
+        <endIndex>10059</endIndex>
+        <startLine>293</startLine>
+        <startColumn>17</startColumn>
+        <endLine>293</endLine>
+        <endColumn>28</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to ValidateUpLeft must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>308</line>
+        <index>10526</index>
+        <endIndex>10539</endIndex>
+        <startLine>308</startLine>
+        <startColumn>17</startColumn>
+        <endLine>308</endLine>
+        <endColumn>30</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="CommasMustBeSpacedCorrectly" ruleCheckId="SA1001">
+        <context>Invalid spacing around the comma.</context>
+        <line>201</line>
+        <index>6975</index>
+        <endIndex>6975</endIndex>
+        <startLine>201</startLine>
+        <startColumn>27</startColumn>
+        <endLine>201</endLine>
+        <endColumn>27</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Move.</context>
+        <line>324</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>324</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>324</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>324</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Move.</context>
+        <line>348</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>348</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>348</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>348</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>350</line>
+        <index>11927</index>
+        <endIndex>11935</endIndex>
+        <startLine>350</startLine>
+        <startColumn>42</startColumn>
+        <endLine>350</endLine>
+        <endColumn>50</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>356</line>
+        <index>12162</index>
+        <endIndex>12170</endIndex>
+        <startLine>356</startLine>
+        <startColumn>72</startColumn>
+        <endLine>356</endLine>
+        <endColumn>80</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1009">
+        <context>Invalid spacing around the closing parenthesis.</context>
+        <line>348</line>
+        <index>11871</index>
+        <endIndex>11871</endIndex>
+        <startLine>348</startLine>
+        <startColumn>109</startColumn>
+        <endLine>348</endLine>
+        <endColumn>109</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Move.</context>
+        <line>372</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>372</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>372</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>372</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>374</line>
+        <index>12716</index>
+        <endIndex>12724</endIndex>
+        <startLine>374</startLine>
+        <startColumn>27</startColumn>
+        <endLine>374</endLine>
+        <endColumn>35</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>380</line>
+        <index>12921</index>
+        <endIndex>12929</endIndex>
+        <startLine>380</startLine>
+        <startColumn>46</startColumn>
+        <endLine>380</endLine>
+        <endColumn>54</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1009">
+        <context>Invalid spacing around the closing parenthesis.</context>
+        <line>372</line>
+        <index>12675</index>
+        <endIndex>12675</endIndex>
+        <startLine>372</startLine>
+        <startColumn>107</startColumn>
+        <endLine>372</endLine>
+        <endColumn>107</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Move.</context>
+        <line>396</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>396</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>396</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>396</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>398</line>
+        <index>13484</index>
+        <endIndex>13492</endIndex>
+        <startLine>398</startLine>
+        <startColumn>27</startColumn>
+        <endLine>398</endLine>
+        <endColumn>35</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>398</line>
+        <index>13511</index>
+        <endIndex>13519</endIndex>
+        <startLine>398</startLine>
+        <startColumn>54</startColumn>
+        <endLine>398</endLine>
+        <endColumn>62</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>404</line>
+        <index>13736</index>
+        <endIndex>13744</endIndex>
+        <startLine>404</startLine>
+        <startColumn>62</startColumn>
+        <endLine>404</endLine>
+        <endColumn>70</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>404</line>
+        <index>13753</index>
+        <endIndex>13761</endIndex>
+        <startLine>404</startLine>
+        <startColumn>79</startColumn>
+        <endLine>404</endLine>
+        <endColumn>87</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1009">
+        <context>Invalid spacing around the closing parenthesis.</context>
+        <line>396</line>
+        <index>13443</index>
+        <endIndex>13443</endIndex>
+        <startLine>396</startLine>
+        <startColumn>111</startColumn>
+        <endLine>396</endLine>
+        <endColumn>111</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Move.</context>
+        <line>420</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>420</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>420</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>420</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>422</line>
+        <index>14307</index>
+        <endIndex>14315</endIndex>
+        <startLine>422</startLine>
+        <startColumn>27</startColumn>
+        <endLine>422</endLine>
+        <endColumn>35</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>428</line>
+        <index>14512</index>
+        <endIndex>14520</endIndex>
+        <startLine>428</startLine>
+        <startColumn>46</startColumn>
+        <endLine>428</endLine>
+        <endColumn>54</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="CodeMustNotContainMultipleWhitespaceInARow" ruleCheckId="SA1025">
+        <context>The code contains multiple spaces in a row. Only one space is needed.</context>
+        <line>420</line>
+        <index>14174</index>
+        <endIndex>14175</endIndex>
+        <startLine>420</startLine>
+        <startColumn>15</startColumn>
+        <endLine>420</endLine>
+        <endColumn>16</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1009">
+        <context>Invalid spacing around the closing parenthesis.</context>
+        <line>420</line>
+        <index>14266</index>
+        <endIndex>14266</endIndex>
+        <startLine>420</startLine>
+        <startColumn>107</startColumn>
+        <endLine>420</endLine>
+        <endColumn>107</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Move.</context>
+        <line>444</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>444</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>444</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>444</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>446</line>
+        <index>15074</index>
+        <endIndex>15082</endIndex>
+        <startLine>446</startLine>
+        <startColumn>27</startColumn>
+        <endLine>446</endLine>
+        <endColumn>35</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>452</line>
+        <index>15314</index>
+        <endIndex>15322</endIndex>
+        <startLine>452</startLine>
+        <startColumn>62</startColumn>
+        <endLine>452</endLine>
+        <endColumn>70</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1009">
+        <context>Invalid spacing around the closing parenthesis.</context>
+        <line>444</line>
+        <index>15033</index>
+        <endIndex>15033</endIndex>
+        <startLine>444</startLine>
+        <startColumn>110</startColumn>
+        <endLine>444</endLine>
+        <endColumn>110</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Move.</context>
+        <line>468</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>468</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>468</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>468</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1009">
+        <context>Invalid spacing around the closing parenthesis.</context>
+        <line>468</line>
+        <index>15836</index>
+        <endIndex>15836</endIndex>
+        <startLine>468</startLine>
+        <startColumn>106</startColumn>
+        <endLine>468</endLine>
+        <endColumn>106</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustBeginWithLowerCaseLetter" ruleCheckId="SA1306">
+        <context>Variable names and private field names must start with a lower-case letter: Move.</context>
+        <line>492</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>492</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_CurrentPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>492</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_OtherPlayer' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>492</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1009">
+        <context>Invalid spacing around the closing parenthesis.</context>
+        <line>492</line>
+        <index>16582</index>
+        <endIndex>16582</endIndex>
+        <startLine>492</startLine>
+        <startColumn>108</startColumn>
+        <endLine>492</endLine>
+        <endColumn>108</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>534</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
+        <context>The variable name 'i_Board' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
+        <line>516</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>523</line>
+        <index>17515</index>
+        <endIndex>17523</endIndex>
+        <startLine>523</startLine>
+        <startColumn>37</startColumn>
+        <endLine>523</endLine>
+        <endColumn>45</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to BoardSize must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>521</line>
+        <index>17447</index>
+        <endIndex>17455</endIndex>
+        <startLine>521</startLine>
+        <startColumn>33</startColumn>
+        <endLine>521</endLine>
+        <endColumn>41</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="CommasMustBeSpacedCorrectly" ruleCheckId="SA1001">
+        <context>Invalid spacing around the comma.</context>
+        <line>525</line>
+        <index>17584</index>
+        <endIndex>17584</endIndex>
+        <startLine>525</startLine>
+        <startColumn>34</startColumn>
+        <endLine>525</endLine>
+        <endColumn>34</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="CommasMustBeSpacedCorrectly" ruleCheckId="SA1001">
+        <context>Invalid spacing around the comma.</context>
+        <line>529</line>
+        <index>17725</index>
+        <endIndex>17725</endIndex>
+        <startLine>529</startLine>
+        <startColumn>39</startColumn>
+        <endLine>529</endLine>
+        <endColumn>39</endColumn>
         <warning>False</warning>
       </violation>
     </violations>
