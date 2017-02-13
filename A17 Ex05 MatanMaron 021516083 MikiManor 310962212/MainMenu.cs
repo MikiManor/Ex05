@@ -18,18 +18,18 @@ namespace Ex05_Othelo
         private void buttonChangeBoardSize_Click(object sender, EventArgs e)
         {
             OtheloBoard.BoardSize += 2;
-            buttonChangeBoardSize.Text = string.Format("Board & Size: {0}x{0}(Click to increase)",OtheloBoard.BoardSize);
+            this.buttonChangeBoardSize.Text = string.Format("Board & Size: {0}x{0}(Click to increase)", OtheloBoard.BoardSize);
         }
 
         private void buttonPlayVsPc_Click(object sender, EventArgs e)
         {
-            Hide();
+            this.Hide();
             OtheloUI.StartPlay(OtheloBoard.BoardSize, 2);
         }
 
         private void buttonPlayVsHuman_Click(object sender, EventArgs e)
         {
-            Hide();
+            this.Hide();
             OtheloUI.StartPlay(OtheloBoard.BoardSize, 1);
         }
     }

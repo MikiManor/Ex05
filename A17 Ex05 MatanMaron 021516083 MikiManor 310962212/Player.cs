@@ -6,9 +6,15 @@ namespace Ex05_Othelo
 {
     public class Player
     {
+        private static int m_Score = 0;
         private readonly Piece r_Symbol;
         private readonly string r_PlayerName;
-        private static int m_Score = 0;
+        public Player(Piece i_Symbol, string io_PlayerName)
+        {
+            r_PlayerName = io_PlayerName;
+            m_Score = 0;
+            r_Symbol = i_Symbol;
+        }
 
         public string PlayerName
         {
@@ -29,13 +35,5 @@ namespace Ex05_Othelo
         {
             m_Score += m_Score;
         }
-
-        public Player(Piece i_Symbol, string io_PlayerName)
-        {
-            r_PlayerName = io_PlayerName;
-            m_Score = 0;
-            r_Symbol = i_Symbol;
-        }
-        
     }
 }

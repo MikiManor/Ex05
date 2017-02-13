@@ -6,7 +6,6 @@ namespace Ex05_Othelo
 {
     static class Program
     {
-        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -21,25 +20,20 @@ namespace Ex05_Othelo
         }
     }
 
-    public class OtheloUI
+    internal class OtheloUI
     {
-        private static MainMenu m_MyMenu;
         internal static GameEngine m_GameEngine;
-        private static GameBoard m_GameBoard;
         internal static bool gameOver = false;
         internal static bool isPlayerOne = true;
         internal static int menuSelection;
+        private static GameBoard m_GameBoard;
+        private static MainMenu m_MyMenu;
 
         public OtheloUI()
         {
             m_MyMenu = new MainMenu();
         }
-
-        internal void RunGame()
-        {
-            Application.Run(m_MyMenu);
-        }
-
+        
         internal static void StartPlay(int i_boardSize, int i_menuSelection)
         {
             m_GameEngine = new GameEngine();
@@ -55,29 +49,7 @@ namespace Ex05_Othelo
             }
         }
 
-        private static void PlayerVsPlayer()
-        {
-            menuSelection = 1;
-            m_GameBoard.GetPlayerName("Player 1 - What is your name? ");
-            string name1 = m_GameBoard.GetName();
-            m_GameEngine.CreateFirstPlayer(name1);
-            m_GameBoard.GetPlayerName("Player 2 - What is your name? ");
-            string name2 = m_GameBoard.GetName();
-            m_GameEngine.CreateSecondPlayer(name2);
-            gamefirstMove();
-        }
-
-        private static void PlayerVsComputer()
-        {
-            menuSelection = 2;
-            m_GameBoard.GetPlayerName("Player 1 - What is your name?");
-            string name = m_GameBoard.GetName();
-            m_GameEngine.CreateFirstPlayer(name);
-            m_GameEngine.CreateComputerPlayer();
-            gamefirstMove();
-        }
-
-        internal static void gamefirstMove()
+        internal static void GamefirstMove()
         {
             m_GameBoard.Show();
             m_GameEngine.CreateBoard(OtheloBoard.BoardSize);
@@ -86,24 +58,11 @@ namespace Ex05_Othelo
             ShowMoves();
         }
 
-        private static void ShowMoves()
+        internal static void GameMoves(Point playerPoint)
         {
-            Point[] validpointlist;
             if (isPlayerOne)
             {
-                validpointlist = m_GameEngine.AvalibleMoves(m_GameEngine.Board, Piece.Black, Piece.White);
-            }
-            else
-            {
-                validpointlist = m_GameEngine.AvalibleMoves(m_GameEngine.Board, Piece.White, Piece.Black);
-            }
-            m_GameBoard.DrawMoves(m_GameEngine.Board, validpointlist);
-        }
-        internal static void gameMoves(Point playerPoint)
-        { 
-            if (isPlayerOne)
-            {
-                   m_GameEngine.HumanMove(playerPoint, isPlayerOne);
+                m_GameEngine.HumanMove(playerPoint, isPlayerOne);
             }
             else
             {
@@ -118,7 +77,7 @@ namespace Ex05_Othelo
             }
         }
 
-            internal static void gameNextMoves()
+        internal static void GameNextMoves()
         {
             int numOfValidMovesForPlayer1 = m_GameEngine.AvalibleMoves(m_GameEngine.Board, Piece.Black, Piece.White).Length;
             int numOfValidMovesForPlayer2 = m_GameEngine.AvalibleMoves(m_GameEngine.Board, Piece.White, Piece.Black).Length;
@@ -163,8 +122,8 @@ namespace Ex05_Othelo
 
             if (gameOver)
             {
-                string msg = string.Format("GameOver! Black: {0}, White: {1}, And the winner is : {2}", m_GameEngine.ScoreCount(m_GameEngine.Board).X, m_GameEngine.ScoreCount(m_GameEngine.Board).Y, winnerPlayer);
-                DialogResult  result = MessageBox.Show(msg, "capt", MessageBoxButtons.YesNo);
+                string msg = string.Format("GameOver! Black: {0}, White: {1}, And the winner is : {2}. Another one?", m_GameEngine.ScoreCount(m_GameEngine.Board).X, m_GameEngine.ScoreCount(m_GameEngine.Board).Y, winnerPlayer);
+                DialogResult result = MessageBox.Show(msg, "capt", MessageBoxButtons.YesNo);
 
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
@@ -178,8 +137,50 @@ namespace Ex05_Othelo
                     Application.Exit();
                 }
             }
+
             ShowMoves();
+        }
+
+        internal void RunGame()
+        {
+            Application.Run(m_MyMenu);
+        }
+
+        private static void PlayerVsPlayer()
+        {
+            menuSelection = 1;
+            m_GameBoard.GetPlayerName("Player 1 - What is your name? ");
+            string name1 = m_GameBoard.GetName();
+            m_GameEngine.CreateFirstPlayer(name1);
+            m_GameBoard.GetPlayerName("Player 2 - What is your name? ");
+            string name2 = m_GameBoard.GetName();
+            m_GameEngine.CreateSecondPlayer(name2);
+            GamefirstMove();
+        }
+
+        private static void PlayerVsComputer()
+        {
+            menuSelection = 2;
+            m_GameBoard.GetPlayerName("Player 1 - What is your name?");
+            string name = m_GameBoard.GetName();
+            m_GameEngine.CreateFirstPlayer(name);
+            m_GameEngine.CreateComputerPlayer();
+            GamefirstMove();
+        }
+
+        private static void ShowMoves()
+        {
+            Point[] validpointlist;
+            if (isPlayerOne)
+            {
+                validpointlist = m_GameEngine.AvalibleMoves(m_GameEngine.Board, Piece.Black, Piece.White);
+            }
+            else
+            {
+                validpointlist = m_GameEngine.AvalibleMoves(m_GameEngine.Board, Piece.White, Piece.Black);
+            }
+
+            m_GameBoard.DrawMoves(m_GameEngine.Board, validpointlist);
         }
     }
 }
-

@@ -27,7 +27,7 @@ namespace Ex05_Othelo
             get { return this.m_Player2; }
         }
 
-        public Piece [ , ] Board
+        public Piece[,] Board
         {
             get { return this.m_Board.Matrix; }
         }
@@ -64,7 +64,7 @@ namespace Ex05_Othelo
                 
         public bool IsUserInputPointInBoundaries(Point i_UserInputPoint)
         {
-            if (i_UserInputPoint.X >= BoardSize || i_UserInputPoint.X < 0 || i_UserInputPoint.Y >= BoardSize || i_UserInputPoint.Y < 0)
+            if (i_UserInputPoint.X >= this.BoardSize || i_UserInputPoint.X < 0 || i_UserInputPoint.Y >= this.BoardSize || i_UserInputPoint.Y < 0)
             {
                 return false;
             }
@@ -89,9 +89,9 @@ namespace Ex05_Othelo
                 symbolOfi_OtherPlayer = Piece.Black;
             }
 
-            if (ValidateMove(i_PlayerPoint, m_Board.Matrix, symbolOfi_CurrentPlayer, symbolOfi_OtherPlayer))
+            if (this.ValidateMove(i_PlayerPoint, this.m_Board.Matrix, symbolOfi_CurrentPlayer, symbolOfi_OtherPlayer))
             {
-                MakeMove(i_PlayerPoint, m_Board.Matrix, symbolOfi_CurrentPlayer, symbolOfi_OtherPlayer);
+                this.MakeMove(i_PlayerPoint, this.m_Board.Matrix, symbolOfi_CurrentPlayer, symbolOfi_OtherPlayer);
                 return true;
             }
             else
@@ -103,26 +103,26 @@ namespace Ex05_Othelo
         public Point PcAI(Piece[,] i_Board, Point[] validpointlist)
         {
             Point tempscore = new Point();
-            tempscore.X = BoardSize * BoardSize;
+            tempscore.X = this.BoardSize * this.BoardSize;
             tempscore.Y = 0;
             Point goodplay = new Point();
             for (int k = 0; k < validpointlist.GetLength(0); k++)
             {
-                Piece[,] tempboard = new Piece[BoardSize , BoardSize];
-                for (int i = 0; i < BoardSize; i++)
+                Piece[,] tempboard = new Piece[this.BoardSize, this.BoardSize];
+                for (int i = 0; i < this.BoardSize; i++)
                 {
-                    for (int j = 0; j < BoardSize; j++)
+                    for (int j = 0; j < this.BoardSize; j++)
                     {
-                        tempboard[i,j] = i_Board[i,j];
+                        tempboard[i, j] = i_Board[i, j];
                     }
                 }
 
-                MakeMove(validpointlist[k], tempboard, Piece.White, Piece.Black);
+                this.MakeMove(validpointlist[k], tempboard, Piece.White, Piece.Black);
 
-                if ((ScoreCount(tempboard).Y > tempscore.Y) && (ScoreCount(tempboard).X < tempscore.X))
+                if ((this.ScoreCount(tempboard).Y > tempscore.Y) && (this.ScoreCount(tempboard).X < tempscore.X))
                 {
-                    tempscore.Y = ScoreCount(tempboard).Y;
-                    tempscore.X = ScoreCount(tempboard).X;
+                    tempscore.Y = this.ScoreCount(tempboard).Y;
+                    tempscore.X = this.ScoreCount(tempboard).X;
                     goodplay.X = validpointlist[k].X;
                     goodplay.Y = validpointlist[k].Y;
                 }
@@ -150,63 +150,60 @@ namespace Ex05_Othelo
         public void MakePcMove(Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
         {
             Point[] validpointlist;
-            validpointlist = AvalibleMoves(i_Board, i_CurrentPlayer, i_OtherPlayer); // list pc moves
+            validpointlist = this.AvalibleMoves(i_Board, i_CurrentPlayer, i_OtherPlayer); // list pc moves
             if (validpointlist.Length == 0)
             {
-                Console.WriteLine("No moves!");
                 return;
             }
 
             Point pcmove = new Point();
-            pcmove = PcAI(i_Board, validpointlist);
-            MakeMove(pcmove, i_Board, i_CurrentPlayer, i_OtherPlayer);//pc choose play
-            Console.WriteLine("[PC will Play : {0},{1}] ", pcmove.Y +1, (char)((pcmove.X +1)+64));
-            System.Console.ReadLine();
+            pcmove = this.PcAI(i_Board, validpointlist);
+            this.MakeMove(pcmove, i_Board, i_CurrentPlayer, i_OtherPlayer); // pc choose play
         }
 
         public Point[] AvalibleMoves(Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
         {
-            Point[] Tempvalidpoint = new Point[OtheloBoard.BoardSize * OtheloBoard.BoardSize];
-            Point Testpoint = new Point();
+            Point[] tempvalidpoint = new Point[OtheloBoard.BoardSize * OtheloBoard.BoardSize];
+            Point testpoint = new Point();
             int k = 0;
             int counter = 0;
             for (int i = 0; i < OtheloBoard.BoardSize; i++)
             {
                 for (int j = 0; j < OtheloBoard.BoardSize; j++)
                 {
-                    Testpoint.X = j;
-                    Testpoint.Y = i;
-                    if (ValidateMove(Testpoint, i_Board, i_CurrentPlayer, i_OtherPlayer))
+                    testpoint.X = j;
+                    testpoint.Y = i;
+                    if (this.ValidateMove(testpoint, i_Board, i_CurrentPlayer, i_OtherPlayer))
                     {
-                        Tempvalidpoint[k].X = Testpoint.X;
-                        Tempvalidpoint[k].Y = Testpoint.Y;
+                        tempvalidpoint[k].X = testpoint.X;
+                        tempvalidpoint[k].Y = testpoint.Y;
                         counter++;
                         k++;
                     }
                 }
             }
 
-            Point[] NewValidPoint = new Point[counter];
+            Point[] newValidPoint = new Point[counter];
             for (int i = 0; i < counter; i++)
             {
-                NewValidPoint[i].X = Tempvalidpoint[i].X;
-                NewValidPoint[i].Y = Tempvalidpoint[i].Y;
+                newValidPoint[i].X = tempvalidpoint[i].X;
+                newValidPoint[i].Y = tempvalidpoint[i].Y;
             }
 
-            return NewValidPoint;
+            return newValidPoint;
         }
 
-        public void MakeMove(Point Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
+        public void MakeMove(Point i_Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
         {
-            i_Board[Move.Y,Move.X] = i_CurrentPlayer;
+            i_Board[i_Move.Y, i_Move.X] = i_CurrentPlayer;
 
-            if (ValidateUp(Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
+            if (ValidateUp(i_Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
             {
-                for (int i = Move.Y - 1; i >= 0; i--)
+                for (int i = i_Move.Y - 1; i >= 0; i--)
                 {
-                    if (i_Board[i, Move.X] == i_OtherPlayer)
+                    if (i_Board[i, i_Move.X] == i_OtherPlayer)
                     {
-                        i_Board[i, Move.X] = i_CurrentPlayer;
+                        i_Board[i, i_Move.X] = i_CurrentPlayer;
                     }
                     else
                     {
@@ -215,9 +212,9 @@ namespace Ex05_Othelo
                 }
             }
 
-            if (ValidateUpRight(Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
+            if (ValidateUpRight(i_Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
             {
-                for (int i = Move.Y - 1, j = Move.X + 1; i >= 0 && j < BoardSize; i--, j++)
+                for (int i = i_Move.Y - 1, j = i_Move.X + 1; i >= 0 && j < BoardSize; i--, j++)
                 {
                     if (i_Board[i, j] == i_OtherPlayer)
                     {
@@ -230,13 +227,13 @@ namespace Ex05_Othelo
                 }
             }
 
-            if (ValidateRight(Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
+            if (ValidateRight(i_Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
             {
-                for (int j = Move.X + 1; j < BoardSize; j++)
+                for (int j = i_Move.X + 1; j < BoardSize; j++)
                 {
-                    if (i_Board[Move.Y, j] == i_OtherPlayer)
+                    if (i_Board[i_Move.Y, j] == i_OtherPlayer)
                     {
-                        i_Board[Move.Y, j] = i_CurrentPlayer;
+                        i_Board[i_Move.Y, j] = i_CurrentPlayer;
                     }
                     else
                     {
@@ -245,9 +242,9 @@ namespace Ex05_Othelo
                 }
             }
 
-                if (ValidateDownRight(Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
+                if (ValidateDownRight(i_Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
                 {
-                    for (int i = Move.Y + 1, j = Move.X + 1; i < BoardSize && j < BoardSize; i++, j++)
+                    for (int i = i_Move.Y + 1, j = i_Move.X + 1; i < BoardSize && j < BoardSize; i++, j++)
                     {
                         if (i_Board[i, j] == i_OtherPlayer)
                         {
@@ -260,13 +257,13 @@ namespace Ex05_Othelo
                 }  
             }
 
-            if (ValidateDown(Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
+            if (ValidateDown(i_Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
             {
-                for (int i = Move.Y + 1; i < BoardSize; i++)
+                for (int i = i_Move.Y + 1; i < BoardSize; i++)
                 {
-                    if (i_Board[i, Move.X] == i_OtherPlayer)
+                    if (i_Board[i, i_Move.X] == i_OtherPlayer)
                     {
-                        i_Board[i, Move.X] = i_CurrentPlayer;
+                        i_Board[i, i_Move.X] = i_CurrentPlayer;
                     }
                     else
                     {
@@ -275,9 +272,9 @@ namespace Ex05_Othelo
                 }
             }
 
-            if (ValidateDownLeft(Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
+            if (ValidateDownLeft(i_Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
             {
-                for (int i = Move.Y + 1, j = Move.X - 1; i < BoardSize && j >= 0; i++, j--)
+                for (int i = i_Move.Y + 1, j = i_Move.X - 1; i < BoardSize && j >= 0; i++, j--)
                 {
                     if (i_Board[i, j] == i_OtherPlayer)
                     {
@@ -290,13 +287,13 @@ namespace Ex05_Othelo
                 }
             }
 
-            if (ValidateLeft(Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
+            if (ValidateLeft(i_Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
             {
-                for (int j = Move.X - 1; j >= 0; j--)
+                for (int j = i_Move.X - 1; j >= 0; j--)
                 {
-                    if (i_Board[Move.Y, j] == i_OtherPlayer)
+                    if (i_Board[i_Move.Y, j] == i_OtherPlayer)
                     {
-                        i_Board[Move.Y, j] = i_CurrentPlayer;
+                        i_Board[i_Move.Y, j] = i_CurrentPlayer;
                     }
                     else
                     {
@@ -305,9 +302,9 @@ namespace Ex05_Othelo
                 }
             }
 
-            if (ValidateUpLeft(Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
+            if (ValidateUpLeft(i_Move, i_Board, i_CurrentPlayer, i_OtherPlayer))
             {
-                for (int i = Move.Y - 1, j = Move.X - 1; i >= 0 && j >= 0; i--, j--)
+                for (int i = i_Move.Y - 1, j = i_Move.X - 1; i >= 0 && j >= 0; i--, j--)
                 {
                     if (i_Board[i, j] == i_OtherPlayer)
                     {
@@ -321,21 +318,21 @@ namespace Ex05_Othelo
             }
         }
 
-        public bool ValidateUp(Point Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
+        public bool ValidateUp(Point i_Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
         {
-            if (Move.Y <= 0)
+            if (i_Move.Y <= 0)
             {
                 return false;
             }
-            else if (i_Board[Move.Y - 1, Move.X] == i_OtherPlayer)
+            else if (i_Board[i_Move.Y - 1, i_Move.X] == i_OtherPlayer)
             {
-                for (int i = Move.Y - 2; i >= 0; i--)
+                for (int i = i_Move.Y - 2; i >= 0; i--)
                 {
-                    if (i_Board[i, Move.X] == i_CurrentPlayer)
+                    if (i_Board[i, i_Move.X] == i_CurrentPlayer)
                     {
                         return true;
                     }
-                    else if (i_Board[i, Move.X] == Piece.Empty)
+                    else if (i_Board[i, i_Move.X] == Piece.Empty)
                     {
                         return false;
                     }
@@ -344,64 +341,16 @@ namespace Ex05_Othelo
 
             return false;
         }
-		
-        public bool ValidateUpRight(Point Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer )
-        {
-            if (Move.Y <= 0 || Move.X >= BoardSize - 1)
-            {
-                return false;
-            }
-            else if (i_Board[Move.Y - 1, Move.X + 1] == i_OtherPlayer)
-            {
-                for (int i = Move.Y - 2, j = Move.X + 2; i >= 0 && j < BoardSize; i--, j++)
-                {
-                    if (i_Board[i, j] == i_CurrentPlayer)
-                    {
-                        return true;
-                    }
-                    else if (i_Board[i, j] == Piece.Empty)
-                    {
-                        return false;
-                    }
-                }
-            }
 
-            return false;
-        }
-		
-        public bool ValidateRight(Point Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer )
+        public bool ValidateUpRight(Point i_Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
         {
-            if (Move.X >= BoardSize - 1)
+            if (i_Move.Y <= 0 || i_Move.X >= BoardSize - 1)
             {
                 return false;
             }
-            else if (i_Board[Move.Y, Move.X + 1] == i_OtherPlayer)
+            else if (i_Board[i_Move.Y - 1, i_Move.X + 1] == i_OtherPlayer)
             {
-                for (int j = Move.X + 2; j < BoardSize; j++)
-                {
-                    if (i_Board[Move.Y, j] == i_CurrentPlayer)
-                    {
-                        return true;
-                    }
-                    else if (i_Board[Move.Y, j] == Piece.Empty)
-                    {
-                        return false;
-                    }
-                }
-            }
-
-            return false;
-        }
-		
-        public bool ValidateDownRight(Point Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer )
-        {
-            if (Move.Y >= BoardSize - 1 || Move.X >= BoardSize - 1)
-            {
-                return false;
-            }
-            else if (i_Board[Move.Y + 1, Move.X + 1] == i_OtherPlayer)
-            {
-                for (int i = Move.Y + 2, j = Move.X + 2; i < BoardSize && j < BoardSize; i++, j++)
+                for (int i = i_Move.Y - 2, j = i_Move.X + 2; i >= 0 && j < BoardSize; i--, j++)
                 {
                     if (i_Board[i, j] == i_CurrentPlayer)
                     {
@@ -416,22 +365,22 @@ namespace Ex05_Othelo
 
             return false;
         }
-		
-        public  bool ValidateDown(Point Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer )
+
+        public bool ValidateRight(Point i_Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
         {
-            if (Move.Y >= BoardSize - 1)
+            if (i_Move.X >= BoardSize - 1)
             {
                 return false;
             }
-            else if (i_Board[Move.Y + 1, Move.X] == i_OtherPlayer)
+            else if (i_Board[i_Move.Y, i_Move.X + 1] == i_OtherPlayer)
             {
-                for (int i = Move.Y + 2; i < BoardSize; i++)
+                for (int j = i_Move.X + 2; j < BoardSize; j++)
                 {
-                    if (i_Board[i, Move.X] == i_CurrentPlayer)
+                    if (i_Board[i_Move.Y, j] == i_CurrentPlayer)
                     {
                         return true;
                     }
-                    else if (i_Board[i, Move.X] == Piece.Empty)
+                    else if (i_Board[i_Move.Y, j] == Piece.Empty)
                     {
                         return false;
                     }
@@ -440,64 +389,16 @@ namespace Ex05_Othelo
 
             return false;
         }
-		
-        public bool ValidateDownLeft(Point Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer )
-        {
-            if (Move.Y >= BoardSize - 1 || Move.X <= 0)
-            {
-                return false;
-            }
-            else if (i_Board[Move.Y + 1, Move.X - 1] == i_OtherPlayer)
-            {
-                for (int i = Move.Y + 2, j = Move.X - 2; i < BoardSize && j >= 0; i++, j--)
-                {
-                    if (i_Board[i, j] == i_CurrentPlayer)
-                    {
-                        return true;
-                    }
-                    else if (i_Board[i, j] == Piece.Empty)
-                    {
-                        return false;
-                    }
-                }
-            }
 
-            return false;
-        }
-		
-        public bool ValidateLeft(Point Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer )
+        public bool ValidateDownRight(Point i_Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
         {
-            if (Move.X <= 0)
+            if (i_Move.Y >= BoardSize - 1 || i_Move.X >= BoardSize - 1)
             {
                 return false;
             }
-            else if (i_Board[Move.Y, Move.X - 1] == i_OtherPlayer)
+            else if (i_Board[i_Move.Y + 1, i_Move.X + 1] == i_OtherPlayer)
             {
-                for (int j = Move.X - 2; j >= 0; j--)
-                {
-                    if (i_Board[Move.Y, j] == i_CurrentPlayer)
-                    {
-                        return true;
-                    }
-                    else if (i_Board[Move.Y, j] == Piece.Empty)
-                    {
-                        return false;
-                    }
-                }
-            }
-
-            return false;
-        }
-		
-        public bool ValidateUpLeft(Point Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer )
-        {
-            if (Move.Y <= 0 || Move.X <= 0)
-            {
-                return false;
-            }
-            else if (i_Board[Move.Y - 1, Move.X - 1] == i_OtherPlayer)
-            {
-                for (int i = Move.Y - 2, j = Move.X - 2; i >= 0 && j >= 0; i--, j--)
+                for (int i = i_Move.Y + 2, j = i_Move.X + 2; i < BoardSize && j < BoardSize; i++, j++)
                 {
                     if (i_Board[i, j] == i_CurrentPlayer)
                     {
@@ -512,26 +413,123 @@ namespace Ex05_Othelo
 
             return false;
         }
-		
+
+        public bool ValidateDown(Point i_Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
+        {
+            if (i_Move.Y >= BoardSize - 1)
+            {
+                return false;
+            }
+            else if (i_Board[i_Move.Y + 1, i_Move.X] == i_OtherPlayer)
+            {
+                for (int i = i_Move.Y + 2; i < BoardSize; i++)
+                {
+                    if (i_Board[i, i_Move.X] == i_CurrentPlayer)
+                    {
+                        return true;
+                    }
+                    else if (i_Board[i, i_Move.X] == Piece.Empty)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public bool ValidateDownLeft(Point i_Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
+        {
+            if (i_Move.Y >= BoardSize - 1 || i_Move.X <= 0)
+            {
+                return false;
+            }
+            else if (i_Board[i_Move.Y + 1, i_Move.X - 1] == i_OtherPlayer)
+            {
+                for (int i = i_Move.Y + 2, j = i_Move.X - 2; i < BoardSize && j >= 0; i++, j--)
+                {
+                    if (i_Board[i, j] == i_CurrentPlayer)
+                    {
+                        return true;
+                    }
+                    else if (i_Board[i, j] == Piece.Empty)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public bool ValidateLeft(Point i_Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
+        {
+            if (i_Move.X <= 0)
+            {
+                return false;
+            }
+            else if (i_Board[i_Move.Y, i_Move.X - 1] == i_OtherPlayer)
+            {
+                for (int j = i_Move.X - 2; j >= 0; j--)
+                {
+                    if (i_Board[i_Move.Y, j] == i_CurrentPlayer)
+                    {
+                        return true;
+                    }
+                    else if (i_Board[i_Move.Y, j] == Piece.Empty)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public bool ValidateUpLeft(Point i_Move, Piece[,] i_Board, Piece i_CurrentPlayer, Piece i_OtherPlayer)
+        {
+            if (i_Move.Y <= 0 || i_Move.X <= 0)
+            {
+                return false;
+            }
+            else if (i_Board[i_Move.Y - 1, i_Move.X - 1] == i_OtherPlayer)
+            {
+                for (int i = i_Move.Y - 2, j = i_Move.X - 2; i >= 0 && j >= 0; i--, j--)
+                {
+                    if (i_Board[i, j] == i_CurrentPlayer)
+                    {
+                        return true;
+                    }
+                    else if (i_Board[i, j] == Piece.Empty)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return false;
+        }
+
         public Point ScoreCount(Piece[,] i_Board)
         {
             Point score = new Point();
             score.X = 0;
             score.Y = 0;
-            for (int i = 0; i < BoardSize; i++)
+            for (int i = 0; i < this.BoardSize; i++)
             {
-                for (int j = 0; j < BoardSize; j++)
+                for (int j = 0; j < this.BoardSize; j++)
                 {
-                    if (i_Board[i,j] == Piece.Black)
+                    if (i_Board[i, j] == Piece.Black)
                     {
                         score.X++;
                     }
-                    else if (i_Board[i,j] == Piece.White)
+                    else if (i_Board[i, j] == Piece.White)
                     {
                         score.Y++;
                     }
                 }
             }
+
             return score;
         }
     }

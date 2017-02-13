@@ -160,7 +160,7 @@ namespace Ex05_Othelo
                 this.moveOnClick(sender, e);
             }
 
-            OtheloUI.gameNextMoves();
+            OtheloUI.GameNextMoves();
             this.Refresh();
         }
 
@@ -171,7 +171,7 @@ namespace Ex05_Othelo
             int n = OtheloBoard.BoardSize;
             this.playerPoint.X = i / n;
             this.playerPoint.Y = i % n;
-            OtheloUI.gameMoves(this.playerPoint);
+            OtheloUI.GameMoves(this.playerPoint);
             this.buttonOnBoardList[i].Enabled = false;
             if (OtheloUI.isPlayerOne)
             {
