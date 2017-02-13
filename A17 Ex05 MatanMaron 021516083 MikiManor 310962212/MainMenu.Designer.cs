@@ -1,4 +1,4 @@
-﻿namespace Ex05_Othelo
+﻿namespace A17_Ex05_MatanMaron_021516083_MikiManor_310962212
 {
     partial class MainMenu
     {

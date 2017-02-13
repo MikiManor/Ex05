@@ -50,6 +50,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GameEngine.cs" />
+    <Compile Include="OthelloUI.cs" />
     <Compile Include="OtheloBoard.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
@@ -85,6 +86,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TextFile5.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

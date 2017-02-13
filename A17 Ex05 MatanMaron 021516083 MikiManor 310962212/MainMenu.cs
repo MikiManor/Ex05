@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Ex05_Othelo
+namespace A17_Ex05_MatanMaron_021516083_MikiManor_310962212
 {
     public partial class MainMenu : Form
     {

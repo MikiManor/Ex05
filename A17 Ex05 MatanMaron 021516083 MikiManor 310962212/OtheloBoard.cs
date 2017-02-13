@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
-namespace Ex05_Othelo
+namespace A17_Ex05_MatanMaron_021516083_MikiManor_310962212
 {
     public enum Piece
     {

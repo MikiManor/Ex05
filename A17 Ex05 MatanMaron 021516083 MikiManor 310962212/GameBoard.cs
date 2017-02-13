@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Ex05_Othelo
+namespace A17_Ex05_MatanMaron_021516083_MikiManor_310962212
 {
     internal class GameBoard : Form
     {
@@ -171,7 +171,7 @@ namespace Ex05_Othelo
             int n = OtheloBoard.BoardSize;
             this.playerPoint.X = i / n;
             this.playerPoint.Y = i % n;
-            OtheloUI.GameMoves(this.playerPoint);
+            OtheloUI.GameMoves(playerPoint);
             this.buttonOnBoardList[i].Enabled = false;
             if (OtheloUI.isPlayerOne)
             {
